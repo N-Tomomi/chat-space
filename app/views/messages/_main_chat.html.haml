@@ -1,0 +1,33 @@
+.MainChat
+  .MainChat__MainHeader
+    .MainHeaderItems__LeftBox
+      %h2(class="MainHeaderItems__GroupName") GroupHello
+      %ul(class="MainHeaderItems__MemberInfo") 
+        %p(class="MemberInfo") Member :
+        %li(class="MemberInfo__MemberLists") mem1 
+        %li(class="MemberInfo__MemberLists") mem2
+    .MeinHeaderItems__EditBtn--Right
+      = link_to "#" do
+        -# Edit
+        .Edit(class="EditBtn")Edit
+  .MainChat__Messages
+    .MessageItems
+      .Messages__Message1
+        .Message__Title
+          %p(class="Title")小見出し
+          %p(class="Date")2020/02/27(Thu) 13:11:24
+        %p(class="Message")メッセージ
+      .Messages__Message2
+        .Message__Title
+          %p(class="Title")内容
+          %p(class="Date")2020/02/27(Thu) 14:11:24
+        %p(class="Message")コメント
+  .MainChat__Form
+    %form(class="NewMessage")
+      .NewMessage__InputBox
+        %input(class="NewMessage__Input" type="text" placeholder="type a message")
+        %label(class="NewMessage__PicIcon")
+          %i.fa.fa-image
+          %input(class="PicIcon__Image" type="file")
+      %input(class="NewMessage__SubmitBtn" type="submit" value="Send")
+  
