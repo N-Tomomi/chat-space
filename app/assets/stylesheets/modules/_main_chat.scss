@@ -1,0 +1,128 @@
+.MainChat {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color: $white_color;
+  .MainChat__MainHeader {
+    @include display_basic;
+    height: 100px;
+    background-color: $white_color;
+    border-bottom: 1px solid #eeeeee;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    .MainHeaderItems__LeftBox {
+      padding: 35px 0 0 0;
+      h2 {
+        font-size: 20px;
+        color: $contents_color;
+        margin-bottom: 15px;
+        font-weight: normal;
+      }
+      ul {
+        display: flex;
+        p, li{
+          font-size: 12px;
+          color: $detailedInfo_color;
+        }
+      }
+    }
+    .MeinHeaderItems__EditBtn--Right {
+      height: 40px;
+      width: 72px;
+      border: 1px solid $btn_color;
+      a {
+        text-decoration: none;
+        color: $btn_color;
+        .Edit {
+          cursor: $cursor_setting;
+          line-height: 40px;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+  .MainChat__Messages {
+    height: calc(100vh - 190px);
+    width: 100%;
+    background-color: #fafafa;
+    .MessageItems {
+      padding: 35px 0 0 40px;
+      .Messages__Message1 {
+        .Message__Title {
+          display: flex;
+          .Title {
+            color: $contents_color;
+            font-size: 16px;
+          }
+          .Date {
+            color: $detailedInfo_color;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+        .Message {
+          color: $message_color;
+          font-size: 14px;
+          margin: 12px 0 46px 0;
+        }
+      }
+      .Messages__Message2 {
+        .Message__Title {
+          display: flex;
+          .Title {
+            color: $contents_color;
+            font-size: 16px;
+          }
+          .Date {
+            color: $detailedInfo_color;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+        .Message {
+          color: $message_color;
+          font-size: 14px;
+          margin-bottom: 12px 0 46px 0;
+        }
+      }
+    }
+  }
+  .MainChat__Form {
+    height: 90px;
+    width: 100%;
+    background-color: #d2d2d2;
+    form {
+      @include display_basic;
+      justify-content: space-between;
+      .NewMessage__InputBox {
+        @include display_basic;
+        align-items: center;
+        position: relative;
+        .NewMessage__Input {
+          height: 50px;
+          padding: 0 10px;
+          width: 100%;
+          margin-left: 40px;
+          background-color: $white_color;
+        }
+        .NewMessage__PicIcon {
+          position: absolute;
+          right: 10px;
+          cursor: $cursor_setting;
+          .PicIcon__Image {
+            display: none;
+          }
+        }
+      }
+      .NewMessage__SubmitBtn {
+        height: 50px;
+        width: 100px;
+        background-color: $btn_color ;
+        color: $white_color;
+        margin: 20px 40px 20px 15px;
+        padding: 0 30px;
+        cursor: $cursor_setting;
+      }
+    }
+  } 
+}

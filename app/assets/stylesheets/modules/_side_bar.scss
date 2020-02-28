@@ -1,0 +1,82 @@
+.SideBar {
+  height: 100vh;
+  width: 300px;
+  background-color: $sidebar_header_color;
+  .SideBar__SideHeader {
+    height: 100px;
+    width: 300px;
+    background-color: $sidebar_header_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    .SideHeaderItems {
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      p {
+        line-height: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: $white_color;
+      }
+      ul {
+        width: 60px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        a {
+          @include link_pointer;
+          margin-left: 5px;
+        }
+      }
+    }
+  .SideBar__SideGroups {
+    height: calc(100vh - #{$sideheader_height});
+    width: 300px;
+    background-color: #2f3e51;
+    padding: 20px;
+    .SideGroups__Group1 {
+      .GroupsItems {
+        width: 260px;
+        color: $white_color;
+        .GroupItems__GroupName {
+          font-size: 15px;
+          margin-bottom: 5px;
+          a {
+            @include link_pointer;
+          }
+        }
+        .GroupItems__GroupInfo {
+          font-size: 11px;
+          margin-bottom: 40px;
+          a {
+            @include link_pointer;
+          }
+        }
+      }
+    }  
+    .SideGroups__Group2 {
+      .GroupsItems {
+        width: 260px;
+        color: $white_color;
+        .GroupItems__GroupName {
+          font-size: 15px;
+          margin-bottom: 5px;
+          a {
+            @include link_pointer;
+          }
+        }
+        .GroupItems__GroupInfo {
+          font-size: 11px;
+          margin-bottom: 40px;
+          a {
+            @include link_pointer;
+          }
+        }
+      }
+    }  
+  }
+}

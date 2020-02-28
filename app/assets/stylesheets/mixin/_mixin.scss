@@ -1,0 +1,10 @@
+@mixin link_pointer {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@mixin display_basic {
+  width: 100%;
+  display: flex;
+}
