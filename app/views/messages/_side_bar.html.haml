@@ -1,13 +1,14 @@
 .SideBar
   .SideBar__SideHeader
     .SideHeaderItems
-      %p(class="SideHeaderitems__UserName") UserName
+      %p(class="SideHeaderitems__UserName") 
+        = current_user.name
       %ul(class="SideHeaderItems__icons")
         %li(class="GroupCreationIcon") 
           =link_to "#", class:"EditIcon" do
             %i.fa.fa-edit
         %li(class="ToolIcon")
-          =link_to "#" , class:"CogIcon" do
+          = link_to edit_user_path(current_user) do
             %i.fa.fa-cog
   .SideBar__SideGroups
     .SideGroups__Group1
