@@ -5,25 +5,16 @@
         = current_user.name
       %ul(class="SideHeaderItems__icons")
         %li(class="GroupCreationIcon") 
-          =link_to "#", class:"EditIcon" do
+          =link_to new_group_path, class:"EditIcon" do
             %i.fa.fa-edit
         %li(class="ToolIcon")
           = link_to edit_user_path(current_user) do
             %i.fa.fa-cog
   .SideBar__SideGroups
-    .SideGroups__Group1
+    - current_user.groups.each do |group|
       .GroupsItems
-        %p(class="GroupItems__GroupName") 
-          = link_to "#" do
-            chat group 1
-        %p(class="GroupItems__GroupInfo") 
-          = link_to "#" do
-            まだメッセージがありません
-    .SideGroups__Group2
-      .GroupsItems
-        %p(class="GroupItems__GroupName") 
-          = link_to "#" do
-            chat group 2
-        %p(class="GroupItems__GroupInfo") 
-          = link_to "#" do
-            メッセージ
+        = link_to '#' do
+          .GroupItems__GroupName
+            = group.name
+          .GroupItems__GroupMessage
+            メッセージはまだありません。

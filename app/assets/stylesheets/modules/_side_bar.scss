@@ -38,45 +38,21 @@
     width: 300px;
     background-color: #2f3e51;
     padding: 20px;
-    .SideGroups__Group1 {
-      .GroupsItems {
-        width: 260px;
-        color: $white_color;
+    .GroupsItems {
+      width: 260px;
+      color: $white_color;
+      a {
+        @include link_pointer;
+      }
         .GroupItems__GroupName {
           font-size: 15px;
           margin-bottom: 5px;
-          a {
-            @include link_pointer;
-          }
         }
-        .GroupItems__GroupInfo {
+        .GroupItems__GroupMessage {
           font-size: 11px;
           margin-bottom: 40px;
-          a {
-            @include link_pointer;
-          }
-        }
-      }
-    }  
-    .SideGroups__Group2 {
-      .GroupsItems {
-        width: 260px;
-        color: $white_color;
-        .GroupItems__GroupName {
-          font-size: 15px;
-          margin-bottom: 5px;
-          a {
-            @include link_pointer;
-          }
-        }
-        .GroupItems__GroupInfo {
-          font-size: 11px;
-          margin-bottom: 40px;
-          a {
-            @include link_pointer;
-          }
-        }
-      }
+          color: $white_color;
+        }  
     }  
   }
 }
