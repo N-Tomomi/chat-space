@@ -1,33 +1,25 @@
 .MainChat
   .MainChat__MainHeader
     .MainHeaderItems__LeftBox
-      %h2(class="MainHeaderItems__GroupName") GroupHello
+      %h2(class="MainHeaderItems__GroupName") 
+        = @group.name
       %ul(class="MainHeaderItems__MemberInfo") 
         %p(class="MemberInfo") Member :
-        %li(class="MemberInfo__MemberLists") mem1 
-        %li(class="MemberInfo__MemberLists") mem2
+        %li(class="MemberInfo__MemberLists") 
+          - @group.users.each do |user|
+            = user.name
     .MeinHeaderItems__EditBtn--Right
-      = link_to "#" do
-        -# Edit
-        .Edit(class="EditBtn")Edit
+      = link_to edit_group_path(@group) do
+        .Edit(class="EditBtn")
+          Edit
   .MainChat__Messages
-    .MessageItems
-      .Messages__Message1
-        .Message__Title
-          %p(class="Title")小見出し
-          %p(class="Date")2020/02/27(Thu) 13:11:24
-        %p(class="Message")メッセージ
-      .Messages__Message2
-        .Message__Title
-          %p(class="Title")内容
-          %p(class="Date")2020/02/27(Thu) 14:11:24
-        %p(class="Message")コメント
+    = render @messages
   .MainChat__Form
-    %form(class="NewMessage")
+    = form_for [@group, @message] do |f|
       .NewMessage__InputBox
-        %input(class="NewMessage__Input" type="text" placeholder="type a message")
-        %label(class="NewMessage__PicIcon")
+        = f.text_field :content, class: 'NewMessage__Input', placeholder: 'type a message'
+        = f.label :image, class: 'NewMessage__PicIcon' do
           %i.fa.fa-image
-          %input(class="PicIcon__Image" type="file")
-      %input(class="NewMessage__SubmitBtn" type="submit" value="Send")
-  
+          = f.file_field :image, class: 'PicIcon__Image'
+      = f.submit 'Send', class: 'NewMessage__SubmitBtn'
+
