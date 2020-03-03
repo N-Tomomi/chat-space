@@ -47,7 +47,7 @@
     background-color: #fafafa;
     .MessageItems {
       padding: 35px 0 0 40px;
-      .Messages__Message1 {
+      .Messages__Message {
         .Message__Title {
           display: flex;
           .Title {
@@ -64,25 +64,6 @@
           color: $message_color;
           font-size: 14px;
           margin: 12px 0 46px 0;
-        }
-      }
-      .Messages__Message2 {
-        .Message__Title {
-          display: flex;
-          .Title {
-            color: $contents_color;
-            font-size: 16px;
-          }
-          .Date {
-            color: $detailedInfo_color;
-            font-size: 12px;
-            margin-left: 10px;
-          }
-        }
-        .Message {
-          color: $message_color;
-          font-size: 14px;
-          margin-bottom: 12px 0 46px 0;
         }
       }
     }
