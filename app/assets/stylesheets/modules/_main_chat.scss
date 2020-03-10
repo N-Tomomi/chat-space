@@ -45,6 +45,7 @@
     height: calc(100vh - 190px);
     width: 100%;
     background-color: #fafafa;
+    overflow: scroll;
     .MessageItems {
       padding: 35px 0 0 40px;
       .Messages__Message {
