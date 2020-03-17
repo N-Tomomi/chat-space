@@ -18,3 +18,5 @@
 
 # Lesson5-2で追加
 public/uploads/*
+
+config/secrets.yml
